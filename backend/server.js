@@ -5,6 +5,9 @@ import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
 import jobRoutes from './routes/jobRoutes.js';
 import proposalRoutes from './routes/proposalRoutes.js';
+import profileRoutes from './routes/profileRoutes.js';
+
+
 
 
 dotenv.config();
@@ -15,6 +18,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/proposals', proposalRoutes);
+app.use('/api/profiles', profileRoutes);
 
 const PORT = process.env.PORT || 5000;
 

@@ -6,6 +6,8 @@ import PrivateRoute from "./components/PrivateRoute";
 import PostJob from "./pages/PostJob";
 import JobList from "./pages/JobList";
 import ViewProposals from "./pages/ViewProposals";
+import EditProfile from "./pages/EditProfile";
+import ViewProfile from "./pages/ViewProfile";
 
 function App() {
   return (
@@ -37,6 +39,15 @@ function App() {
           </PrivateRoute>
         }
       />
+      <Route
+        path="/edit-profile"
+        element={
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        }
+      />
+      <Route path="/profile/:userId" element={<ViewProfile />} />
     </Routes>
   );
 }
